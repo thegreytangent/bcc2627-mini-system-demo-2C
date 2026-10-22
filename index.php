@@ -11,7 +11,7 @@
 
         <?php include __DIR__ . "/components/sidebar.php";   ?>
        
-        <?php Page::display($_GET['page']); ?>
+        <?php Page::display($_GET['page'] ?? 'dashboard'); ?>
 
     </div>
 </body>
