@@ -12,15 +12,17 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach (StudentRepository::all() as $student) : ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
+                    <th scope="row"><?php echo $student['student_number']; ?></th>
+                   <th scope="row"><?php echo $student['firstname']; ?></th>
+                    <th scope="row"><?php echo $student['dob']; ?></th>
                     <td>
                         <button class="btn btn-info">Edit</button>
                         <button class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
